@@ -7,26 +7,29 @@
   box-sizing: border-box;
   /* font-family: 'Oswald', sans-serif; */
   /* font-family: 'Anton', sans-serif; */
-  font-family: 'Raleway', sans-serif;
-
+  font-family: "Raleway", sans-serif;
 }
 
 body {
-  height: 100vh;
   width: 100%;
-  /* background: linear-gradient(to bottom, #175d69 23%, #330c43 95%); */
+  background-image: url(assets/page1bg.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #464646;
 }
 
-.page1{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+.page1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
-.bg-img{
-    width: 100%;
-    /* height: 100vh; */
-    object-fit: cover;
+.bg-img {
+  width: 100%;
+  /* height: 100vh; */
+  object-fit: cover;
 }
 .header {
   /* position: absolute; */
@@ -94,7 +97,7 @@ body {
 }
 
 .navbar .buttons .signup:hover {
-    background-color: #fff;
+  background-color: #fff;
   color: black;
 }
 
@@ -105,14 +108,14 @@ body {
   /* height: 95vh; */
   padding: 0 15px;
   /* max-width: 1200px; */
-margin-block: 3rem ;
+  margin-block: 3rem;
 }
 
-.hero-left{
-    display: flex;
-    width: 50%;
-    /* gap: 1.5rem; */
-    flex-direction: column;
+.hero-left {
+  display: flex;
+  width: 50%;
+  /* gap: 1.5rem; */
+  flex-direction: column;
 }
 
 .hero-section .hero {
@@ -129,8 +132,8 @@ margin-block: 3rem ;
   margin-bottom: 20px;
 }
 
-.hero-bottom{
-  background-color:rgba(192,192,192,0.3);
+.hero-bottom {
+  background-color: rgba(192, 192, 192, 0.3);
   padding: 30px;
   border-radius: 30px;
 }
@@ -145,10 +148,9 @@ margin-block: 3rem ;
   margin-bottom: 20px;
 }
 
-#hero-span{
+#hero-span {
   color: gainsboro;
 }
-
 
 .hero-p {
   font-size: 1.2rem;
@@ -208,50 +210,7 @@ margin-block: 3rem ;
   order: 1;
 }
 
-@media screen and (max-width: 1023px) {
-  .navbar .logo a {
-    font-size: 1.5rem;
-  }
-
-  .links {
-    position: fixed;
-    left: -100%;
-    top: 75px;
-    width: 100%;
-    height: 100vh;
-    padding-top: 50px;
-    background: #175d69;
-    flex-direction: column;
-    transition: 0.3s ease;
-  }
-
-  .navbar #menu-toggle:checked ~ .links {
-    left: 0;
-  }
-
-  .navbar #hamburger-btn {
-    display: block;
-  }
-
-  .header .buttons {
-    display: none;
-  }
-
-  .hero-section .hero {
-    max-width: 100%;
-    text-align: center;
-  }
-
-  .hero-section img {
-    display: none;
-  }
-}
-
-
 /* ---------------- footer css ----------------- */
-/* .fa-brands{
-  font-size: 40px;
-} */
 .social-media {
   font-size: 35px;
 }
@@ -264,7 +223,7 @@ margin-block: 3rem ;
 }
 .footer {
   background-color: black;
-  margin-block: 20px;
+  /* margin-top: 20px; */
   padding: 30px;
 }
 .footer h3 {
@@ -276,9 +235,75 @@ margin-block: 3rem ;
   align-items: center;
 }
 
+/* ---------- responsive part ---------------- */
 @media screen and (max-width: 1023px) {
+  /* ----------------- navbar responsive ------------------ */
+  .navbar .logo a {
+    font-size: 1.5rem;
+  }
+
+  .links {
+    position: fixed;
+    left: -100%;
+    top: 75px;
+    width: 100%;
+    height: 100vh;
+    padding-top: 50px;
+    background-image: url(assets/navbar-img.jpeg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    flex-direction: column;
+    transition: 0.3s ease;
+  }
+
+  .navbar #menu-toggle:checked ~ .links {
+    left: 0;
+  }
+
+  .navbar #hamburger-btn {
+    display: block;
+  }
+
+  /* ---------- page1 responsive ---------- */
+  .header .buttons {
+    display: none;
+  }
+
+  .hero-section .hero {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .hero-section img {
+    display: none;
+  }
+  
+  .hero h2 {
+    font-size: 5rem;
+    display: flex;
+    flex-direction: column;
+    line-height: 6rem;
+    /* letter-spacing: 0.5rem; */
+    margin-bottom: 20px;
+  }
+  .hero-p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #c9c7c7;
+  }
+  .hero-bottom h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .hero-section .buttons {
+    text-align: center;
+  }
+
+  /* ---------- footer responsive ---------- */
   .social-media {
-    font-size: 40px;
+    font-size: 30px;
   }
   .social-links {
     display: flex;
@@ -289,7 +314,6 @@ margin-block: 3rem ;
   }
   .footer {
     background-color: black;
-    margin-block: 20px;
     padding: 30px;
   }
   .footer h3 {
@@ -300,14 +324,45 @@ margin-block: 3rem ;
     align-items: center;
   }
 }
+
 @media only screen and (max-width: 769px) {
+  .header .buttons {
+    display: none;
+  }
+
+  .hero-section .hero {
+    max-width: 100%;
+    text-align: center;
+  }
+  .hero h2 {
+    font-size: 4rem;
+    display: flex;
+    flex-direction: column;
+    line-height: 4rem;
+    /* letter-spacing: 0.5rem; */
+    margin-bottom: 20px;
+  }
+  .hero-p {
+    font-size: 0.85rem;
+    margin-bottom: 20px;
+    color: #c9c7c7;
+  }
+  .hero-bottom h2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .hero-section .buttons {
+    font-size: 0.8rem;
+  }
+
+  
   #load-more {
     border: 1px solid #fff;
     padding: 5px 10px;
   }
 
   .social-media {
-    font-size: 30px;
+    font-size: 27px;
   }
   .social-links {
     display: flex;
@@ -327,6 +382,7 @@ margin-block: 3rem ;
     align-items: center;
   }
 }
+
 @media only screen and (max-width: 643px) {
   #load-more {
     border: 1px solid #fff;
