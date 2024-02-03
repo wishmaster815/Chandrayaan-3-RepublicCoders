@@ -10,8 +10,13 @@
 body {
   height: 100vh;
   width: 100%;
-  cursor:default;
-  color: white;background-image: linear-gradient( 90deg, rgba(27,24,31,1) 21.2%, rgba(50,4,89,1) 84.8% );
+  cursor: default;
+  color: white;
+  background-image: linear-gradient(
+    90deg,
+    rgba(27, 24, 31, 1) 21.2%,
+    rgba(50, 4, 89, 1) 84.8%
+  );
 }
 .header {
   /* position: absolute; */
@@ -99,14 +104,13 @@ body {
 #aboutUs {
   display: flex;
   padding: 40px;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-
 }
 #aboutUs img {
-  height: 348px;
-  width: 100%;
-  width: 100%;
+  /* height: 348px; */
+  width: 50%;
   object-fit: cover;
   transition: all ease 0.5s;
   border-radius: 10px;
@@ -117,12 +121,13 @@ body {
 
 #aboutUs h3 {
   padding-bottom: 20px;
-  font-size: 40px;
+  font-size: 3rem;
 }
 
 #content {
   display: block;
   text-align: center;
+  width: 100%;
   /* padding: 40px; */
   margin: 40px;
   font-size: 25px;
@@ -173,7 +178,6 @@ body {
     transform: translateX(-100%);
   }
 }
-
 
 /* ---------- page 2 ----------- */
 #card-container {
@@ -241,33 +245,33 @@ body {
   transform: rotate3d(1, 1, 0, 20deg);
 }
 .card h3 {
-    color: white;
-    -webkit-text-stroke: 1px black;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 700;
-    position: relative;
-    display: flex;
-    padding: 20px;
-    top: 50%;
-    font-size: 3rem;
-    text-align: center;
-    text-transform: uppercase;
-    opacity: 1;
+  color: white;
+  -webkit-text-stroke: 1px black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  position: relative;
+  display: flex;
+  padding: 20px;
+  top: 50%;
+  font-size: 3rem;
+  text-align: center;
+  text-transform: uppercase;
+  opacity: 1;
 }
 .card:hover h3 {
   opacity: 0;
 }
 
-
 /* ---------- page 3 ----------- */
-#page3{
+#page3 {
   width: 100%;
   /* height: 100vh; */
   padding: 30px;
 }
-.info h2{
+.info h2 {
   text-align: center;
   font-size: 3rem;
+  margin-bottom: 30px;
 }
 .director {
   width: 100%;
@@ -285,20 +289,20 @@ body {
   font-weight: 100;
 }
 
-#dirImg{
+#dirImg {
   /* background-color:red ; */
   width: 40%;
 }
-#dirImg img{
+#dirImg img {
   width: 100%;
   border-radius: 10px;
 }
-#dirInfo{
+#dirInfo {
   width: 50%;
 }
 
 /* ---------- page 4 ----------- */
-#page4{
+#page4 {
   width: 100%;
   background-image: url(aboutAssets/earthMoon.jpg);
   background-repeat: no-repeat;
@@ -308,58 +312,63 @@ body {
   /* height: 100vh; */
 }
 
-#page4 .chandra{
+#page4 .chandra {
   font-size: 1.5rem;
   width: 100%;
   line-height: 45px;
   font-weight: 100;
   /* text-align: justify; */
 }
-.mission-objectives{
+.mission-objectives {
   display: flex;
   gap: 20px;
   /* background-color: red; */
   width: 100%;
   align-items: center;
 }
-.mission-objectives img{
+.mission-objectives img {
   width: 90%;
   overflow: hidden;
   object-fit: cover;
   border-radius: 10px;
 }
-.mission-text{
+.mission-text {
   width: 50%;
-  padding: 5%;
+  padding: 5% 5% 0 5%;
 }
-.mission-img{
+.mission-img {
   /* background-color: yellow; */
   width: 50%;
 }
 
-.chandra h1{
+.chandra h1 {
   margin-bottom: 45px;
+  font-size: 3rem;
   text-align: center;
 }
-.chandra p{
-  margin-bottom: 30px;
-  font-size: 1.3rem;
+.chandra p {
+  margin-block: 30px;
+  font-size: 1.5rem;
 }
-.mission-text h2{
+.mission-text h2 {
   text-align: center;
   font-size: 1.7rem;
 }
-#data-list li{
-  font-size: 1.3rem;
+#data-list li {
+  font-size: 1.5rem;
 }
 
-
 /* ---------- page 5 ----------- */
-#page5{
+#page5 {
   width: 100%;
   padding: 5%;
   color: black;
   font-weight: 600;
+}
+#page5-head {
+  color: white;
+  text-align: center;
+  font-size: 3rem;
 }
 .container {
   display: flex;
@@ -408,8 +417,8 @@ body {
   width: fit-content;
   padding: 10px;
 }
-.img-cover p{
-  margin-block:5px;
+.img-cover p {
+  margin-block: 5px;
   font-size: 1.2rem;
 }
 
@@ -436,15 +445,6 @@ body {
   justify-content: center;
   align-items: center;
 }
-
-
-
-
-
-
-
-
-
 
 /* ------------------------- responsive part -------------------- */
 @media screen and (max-width: 1023px) {
@@ -511,6 +511,85 @@ body {
     justify-content: center;
     align-items: center;
   }
+
+  /* -------------------- page 1 responsive --------------------- */
+  #aboutUs {
+    flex-direction: column;
+  }
+  #aboutUs img {
+    width: 50%;
+    height: auto;
+  }
+  #aboutUs h3 {
+    font-size: 2.7rem;
+  }
+  #content p {
+    font-size: 1.3rem;
+  }
+  #scroller h4 {
+    font-size: 80px;
+  }
+
+  /* --------------------- page 2 responsive ----------------------- */
+  .card h3 {
+    font-size: 1.7rem;
+  }
+  #card-container {
+    gap: 15px;
+  }
+  .card {
+    width: 50%;
+  }
+  .overlay {
+    padding: 27px;
+  }
+  .overlay p {
+    font-size: 0.8rem;
+  }
+  .overlay h4 {
+    font-size: 1.4rem;
+    margin-top: 55px;
+  }
+
+  /* --------------------- page 3 responsive ----------------------- */
+  .info h2 {
+    font-size: 2.7rem;
+  }
+  .director {
+    flex-direction: column;
+  }
+  .director p {
+    width: 100%;
+    font-size: 1.3rem;
+  }
+  #dirInfo {
+    width: 100%;
+  }
+  .chandra h1 {
+    font-size: 2.7rem;
+  }
+  .chandra p {
+    font-size: 1.3rem;
+  }
+
+  /* ------------------ page 4 responsive --------------------- */
+  .mission-objectives {
+    flex-direction: column-reverse;
+  }
+  .mission-objectives img {
+    width: 100%;
+  }
+  .mission-text {
+    width: 100%;
+  }
+  #data-list li {
+    font-size: 1.3rem;
+  }
+
+  /* ---------------- page 5 responsive  --------------------- */
+  #page5-head {
+    font-size: 2.7rem;
+  }
 }
 @media only screen and (max-width: 769px) {
   .social-media {
@@ -533,7 +612,100 @@ body {
     justify-content: center;
     align-items: center;
   }
+
+  /* -------------------- page 1 responsive --------------------- */
+  #aboutUs {
+    flex-direction: column;
+  }
+  #aboutUs img {
+    width: 50%;
+    height: auto;
+  }
+  #aboutUs h3 {
+    font-size: 2.3rem;
+  }
+  #content p {
+    font-size: 1.1rem;
+  }
+  #scroller h4 {
+    font-size: 65px;
+  }
+
+  /* --------------------- page 2 responsive ----------------------- */
+  /* .card h3 {
+    font-size: 1.7rem;
+  }
+  #card-container {
+    gap: 15px;
+    flex-direction: column;
+  }
+  .card {
+    width: 100%;
+  }
+  .overlay {
+    padding: 27px;
+  }
+  .overlay p {
+    font-size: 0.8rem;
+  }
+  .overlay h4 {
+    font-size: 1.4rem;
+    margin-top: 55px;
+  } */
+  #page2 {
+    display: none;
+  }
+  /* --------------------- page 3 responsive ----------------------- */
+  .info h2 {
+    font-size: 2.3rem;
+  }
+  .director {
+    flex-direction: column;
+  }
+  .director p {
+    width: 100%;
+    font-size: 1.1rem;
+  }
+  #dirImg {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  #dirInfo {
+    width: 100%;
+  }
+  .chandra h1 {
+    font-size: 2.3rem;
+  }
+  .chandra p {
+    font-size: 1.1rem;
+  }
+
+  /* ------------------ page 4 responsive --------------------- */
+  .mission-objectives {
+    flex-direction: column-reverse;
+  }
+  .mission-objectives img {
+    width: 100%;
+  }
+  .mission-text {
+    width: 100%;
+  }
+  #data-list li {
+    font-size: 1.1rem;
+  }
+
+  /* ---------------- page 5 responsive  --------------------- */
+  #page5-head {
+    font-size: 2.3rem;
+  }
+  .container .box {
+    flex-direction: column;
+  }
+  .container .box .dream {
+    width: 100%;
+  }
 }
+
 @media only screen and (max-width: 643px) {
   .social-media {
     font-size: 20px;
@@ -554,5 +726,101 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  /* -------------------- page 1 responsive --------------------- */
+  #aboutUs {
+    flex-direction: column;
+  }
+  #aboutUs img {
+    width: 100%;
+    height: auto;
+  }
+  #aboutUs h3 {
+    font-size: 1.7rem;
+}
+#content p {
+  font-size: 0.8rem;
+  line-height: 30px;
+}
+  #scroller h4 {
+    font-size: 60px;
+  }
+
+  /* --------------------- page 2 responsive ----------------------- */
+  /* .card h3 {
+    font-size: 1.7rem;
+  }
+  #card-container {
+    gap: 15px;
+    flex-direction: column;
+  }
+  .card {
+    width: 100%;
+  }
+  .overlay {
+    padding: 27px;
+  }
+  .overlay p {
+    font-size: 0.8rem;
+  }
+  .overlay h4 {
+    font-size: 1.4rem;
+    margin-top: 55px;
+  } */
+  #page2 {
+    display: none;
+  }
+  /* --------------------- page 3 responsive ----------------------- */
+  .info h2 {
+    font-size: 1.7rem;
+  }
+  .director {
+    flex-direction: column;
+    padding: 0;
+  }
+  .director p {
+    width: 100%;
+    font-size: 0.8rem;
+    line-height: 30px;
+  }
+  #dirImg {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  #dirInfo {
+    width: 100%;
+  }
+  .chandra h1 {
+    font-size: 1.7rem;
+  }
+  .chandra p {
+    font-size: 0.8rem;
+  line-height: 30px;
+  }
+
+  /* ------------------ page 4 responsive --------------------- */
+  .mission-objectives {
+    flex-direction: column-reverse;
+  }
+  .mission-objectives img {
+    width: 100%;
+  }
+  .mission-text {
+    width: 100%;
+  }
+  #data-list li {
+    font-size: 0.8rem;
+  }
+
+  /* ---------------- page 5 responsive  --------------------- */
+  #page5-head {
+    font-size: 1.7rem;
+  }
+  .container .box {
+    flex-direction: column;
+  }
+  .container .box .dream {
+    width: 100%;
   }
 }
