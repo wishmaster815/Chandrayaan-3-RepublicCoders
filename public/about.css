@@ -748,26 +748,6 @@ body {
   }
 
   /* --------------------- page 2 responsive ----------------------- */
-  /* .card h3 {
-    font-size: 1.7rem;
-  }
-  #card-container {
-    gap: 15px;
-    flex-direction: column;
-  }
-  .card {
-    width: 100%;
-  }
-  .overlay {
-    padding: 27px;
-  }
-  .overlay p {
-    font-size: 0.8rem;
-  }
-  .overlay h4 {
-    font-size: 1.4rem;
-    margin-top: 55px;
-  } */
   #page2 {
     display: none;
   }

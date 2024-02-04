@@ -1,0 +1,293 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: 'Oswald', sans-serif; */
+  /* font-family: 'Anton', sans-serif; */
+  font-family: "Raleway", sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  cursor: default;
+  color: white;
+  background-image: linear-gradient(
+    90deg,
+    rgba(27, 24, 31, 1) 21.2%,
+    rgba(50, 4, 89, 1) 84.8%
+  );
+  
+}
+.header {
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 15px;
+}
+
+.navbar .logo a {
+  font-size: 1.8rem;
+  text-decoration: none;
+  color: #fff;
+}
+
+.navbar .links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 35px;
+}
+
+.navbar .links a {
+  font-weight: 500;
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 0;
+  transition: 0.2s ease;
+}
+
+.navbar .links a:hover {
+  color: #47b2e4;
+}
+
+.buttons a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  padding: 15px 0;
+  transition: 0.2s ease;
+}
+
+.buttons a:not(:last-child) {
+  margin-right: 30px;
+}
+
+.buttons .signin:hover {
+  color: #47b2e4;
+}
+
+.buttons .signup {
+  border: 1px solid #fff;
+  padding: 10px 20px;
+  border-radius: 2.375rem;
+  text-align: center;
+  transition: 0.2s ease;
+}
+
+.buttons .signup:hover {
+  background-color: #fff;
+  color: black;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+#hamburger-btn {
+  font-size: 1.8rem;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+  order: 1;
+}
+
+/* -------------- page css ----------------- */
+.know-more{
+    width: 100%;
+    background-image: radial-gradient(circle, #3d00a6, #00238d, #002368, #001b3e, #000e17);
+    padding: 3%;
+    border-radius: 10px;
+    /* height: 100vh; */
+}
+.container{
+    padding: 3%;
+}
+.container h1{
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.know-more p{
+    margin-bottom: 30px;
+    display: flex;
+    line-height: 30px;
+    font-size: 1.2rem;
+    flex-direction: column;
+}
+.know-more p span{
+    margin-bottom: 20px;
+    font-weight: bolder;
+    font-size: 1.5rem;
+}
+
+
+
+/* ---------- footer css ---------- */
+.social-media {
+  font-size: 35px;
+}
+.social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  margin-bottom: 30px;
+}
+.footer {
+  background-color: black;
+  /* margin-block: 20px; */
+  padding: 30px;
+}
+.footer h3 {
+  font-size: 1.2rem;
+  font-weight: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 1023px) {
+  .navbar .logo a {
+    font-size: 1.5rem;
+  }
+  .social-media {
+    font-size: 30px;
+  }
+  .container {
+    min-height: 130vh;
+  }
+  .container .topic-head {
+    width: 75%;
+    padding: 30px;
+  }
+  .container .topic-head h3 {
+    font-size: 1em;
+    font-weight: bolder;
+    border-bottom: 3px solid black;
+  }
+
+  .links {
+    position: fixed;
+    left: -100%;
+    top: 75px;
+    width: 100%;
+    height: 100vh;
+    padding-top: 50px;
+    background: #175d69;
+    flex-direction: column;
+    transition: 0.3s ease;
+  }
+
+  .navbar #menu-toggle:checked ~ .links {
+    left: 0;
+  }
+
+  .navbar #hamburger-btn {
+    display: block;
+  }
+
+
+  .container h1{
+    font-size: 2.5rem;
+}
+.know-more p{
+    font-size: 1rem;
+}
+.know-more p span{
+    font-size: 1.2rem;
+}
+
+  .header .buttons {
+    display: none;
+  }
+  .social-media {
+    font-size: 40px;
+  }
+  .social-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    margin-bottom: 30px;
+  }
+  .footer {
+    background-color: black;
+    padding: 30px;
+  }
+  .footer h3 {
+    font-size: 1.2rem;
+    font-weight: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 769px) {
+  
+    .container h1{
+        font-size: 2rem;
+    }
+    .know-more p{
+        font-size: 0.9remrem;
+    }
+    .know-more p span{
+        font-size: 1rem;
+    }
+  
+  
+    .social-media {
+    font-size: 30px;
+  }
+  .social-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    margin-block: 20px;
+  }
+  .footer {
+    padding: 10px;
+  }
+  .footer h3 {
+    font-size: 1rem;
+    font-weight: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 643px) {
+  .social-media {
+    font-size: 20px;
+  }
+  .social-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    margin-block: 20px;
+  }
+  .footer {
+    padding: 10px;
+  }
+  .footer h3 {
+    font-size: 0.8rem;
+    font-weight: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
