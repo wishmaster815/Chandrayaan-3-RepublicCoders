@@ -79,10 +79,10 @@
             <img src="./galleryAssets/asset 12.webp" alt="" />
           </div>
           <div class="img-cover">
-            <img src="./galleryAssets/asset 23.webp" alt="" />
+            <img src="./galleryAssets/asset 25.webp" alt="" />
           </div>
           <div class="img-cover">
-            <img src="./galleryAssets/asset 13.webp" alt="" />
+            <img src="./galleryAssets/asset 62.webp" alt="" />
           </div>
           
         </div>
@@ -117,37 +117,30 @@
         </div>
         <div class="dream">
           <div class="img-cover">
-            <img src="./galleryAssets/asset 25.webp" alt="" />
+            <img src="./galleryAssets/asset 41.webp" alt="" />
           </div>
           <div class="img-cover">
-            <img src="./galleryAssets/asset 26.webp" alt="" />
+            <img src="./galleryAssets/asset 42.webp" alt="" />
           </div>
           <div class="img-cover">
-            <img src="./galleryAssets/asset 27.webp" alt="" />
+            <img src="./galleryAssets/asset 43.webp" alt="" />
           </div>
           <div class="img-cover">
-            <img src="./galleryAssets/asset 28.webp" alt="" />
+            <img src="./galleryAssets/asset 44.webp" alt="" />
           </div>
           <div class="img-cover">
-            <img src="./galleryAssets/asset 29.webp" alt="" />
+            <img src="./galleryAssets/asset 45.webp" alt="" />
           </div>
           <div class="img-cover">
-            <img src="./galleryAssets/asset 30.webp" alt="" />
+            <img src="./galleryAssets/asset 46.webp" alt="" />
           </div>
           <div class="img-cover">
-            <img src="./galleryAssets/asset 31.webp" alt="" />
-          </div>
-          <div class="img-cover">
-            <img src="./galleryAssets/asset 32.webp" alt="" />
+            <img src="./galleryAssets/asset 47.webp" alt="" />
           </div>
           <div class="img-cover">
             <img src="./galleryAssets/asset 33.webp" alt="" />
           </div>
         </div>
-      </div>
-      
-      <div class="buttons">
-        <div href="#" id="load-more" class="signup">Load More</div>
       </div>
     </div>
     <footer>
@@ -169,23 +162,5 @@
         <h3>Created by Jayesh Shrivastava</h3>
       </div>
     </footer>
-    <script>
-
-      let loadMoreBtn = document.querySelector('#load-more');
-      let currentItem = 6;
-      
-      loadMoreBtn.onclick = () =>{
-         let image = [...document.querySelectorAll('.box .dream')];
-         for (var i = currentItem; i < currentItem + 6; i++){
-            image[i].style.display = 'inline-block';
-         }
-         currentItem += 6;
-      
-         if(currentItem >= boxes.length){
-            loadMoreBtn.style.display = 'none';
-         }
-      }
-      
-      </script>
   </body>
 </html>
